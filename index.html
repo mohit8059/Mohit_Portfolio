@@ -2,132 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mohit Kasana Portfolio</title>
+    <title>Mohit Kasana | Data Analyst Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <img src="images/profile.jpg" class="profile-img">
+<nav>
+    <h2>Mohit Kasana</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <h1>Hi, I am Mohit Kasana</h1>
-    <h2>Data Analyst</h2>
+<header class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm Mohit Kasana</h1>
+        <h2>Data Analyst</h2>
+        <p>
+            I create interactive dashboards, clean data, write SQL queries,
+            and convert raw data into meaningful business insights.
+        </p>
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
+        <a href="#projects" class="btn outline">View Projects</a>
+    </div>
 
-    <p>
-        I am skilled in Excel, SQL, Power BI, Python, DAX and Data Visualization.
-        I create dashboards and reports that help businesses understand their data.
-    </p>
-
-    <a href="resume.pdf" download class="btn">Download Resume</a>
+    <div class="hero-img">
+        <img src="images/profile.jpg">
+    </div>
 </header>
+
+<section id="offer">
+    <h2>What I Offer</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Power BI Dashboards</h3>
+            <p>Interactive dashboards with KPIs, charts, filters and insights.</p>
+        </div>
+
+        <div class="card">
+            <h3>SQL Reporting</h3>
+            <p>Data extraction, filtering, joins, grouping and business reports.</p>
+        </div>
+
+        <div class="card">
+            <h3>Excel Analytics</h3>
+            <p>Data cleaning, pivot tables, formulas, charts and dashboards.</p>
+        </div>
+
+        <div class="card">
+            <h3>Python Automation</h3>
+            <p>Automation projects, billing systems and data processing.</p>
+        </div>
+    </div>
+</section>
 
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a passionate Data Analyst with skills in Excel, SQL, Power BI, Python, DAX, and Data Visualization. I enjoy transforming raw data into meaningful insights and interactive dashboards that support business decision-making.
-
-        I have hands-on experience in data cleaning, data modeling, dashboard development, and reporting. My goal is to use data-driven approaches to solve business problems and help organizations make better decisions.
-        
-        Currently, I am continuously improving my analytical skills by building real-world projects in Power BI, SQL, and Python.
-
+        I am a passionate Data Analyst skilled in Excel, SQL, Power BI, Python,
+        DAX and Data Visualization. I enjoy transforming raw data into meaningful
+        insights and interactive dashboards that support business decision-making.
+    </p>
+    <p>
+        I have hands-on experience in data cleaning, data modeling, dashboard
+        development and reporting. Currently, I am building real-world projects
+        to improve my analytical and technical skills.
     </p>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
+    <h2>Skills & Tools</h2>
 
     <div class="skills-box">
         <span>Excel</span>
         <span>SQL</span>
+        <span>MySQL</span>
         <span>Power BI</span>
-        <span>Python</span>
         <span>DAX</span>
         <span>Power Query</span>
-        <span>Data Visualization</span>
-        <span>MySQL</span>
+        <span>Python</span>
+        <span>GitHub</span>
+        <span>VS Code</span>
     </div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
 
     <div class="project-card">
         <img src="images/sales_dashboard.png">
-        <h3>Sales Performance Dashboard</h3>
-        <p><b>Tools Used:</b> Power BI, Excel, DAX</p>
-        <p><b>Business Problem:</b> Management wanted to track sales, profit, orders and regional performance.</p>
-        <p><b>Key Insights:</b> Identified top-performing products, profitable regions and monthly sales trends.</p>
-        <a href="#" class="btn">View Project</a>
+        <div>
+            <h3>Sales Performance Dashboard</h3>
+            <p><b>Tools:</b> Power BI, Excel, DAX</p>
+            <p>Analyzed sales, profit, orders, products and regional performance.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
     </div>
 
     <div class="project-card">
         <img src="images/hr_dashboard.png">
-        <h3>HR Analytics Dashboard</h3>
-        <p><b>Tools Used:</b> Power BI, Excel, DAX</p>
-        <p><b>Business Problem:</b> HR team wanted to understand employee attrition and workforce trends.</p>
-        <p><b>Key Insights:</b> Analyzed attrition by department, age group, salary and job role.</p>
-        <a href="#" class="btn">View Project</a>
+        <div>
+            <h3>HR Analytics Dashboard</h3>
+            <p><b>Tools:</b> Power BI, Excel, DAX</p>
+            <p>Analyzed employee attrition, department trends and workforce insights.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
     </div>
-    <div class="project-card">
-    <img src="images/gst_billing_system.png">    
-    <h3>GST Billing System</h3>
 
-    <p><b>Tools Used:</b> Python, Tkinter, ReportLab, MySQL</p>
-
-    <p>
-        <b>Business Problem:</b>
-        Small businesses need a simple system to create GST invoices, manage customer billing,
-        calculate GST, and generate professional PDF invoices.
-    </p>
-
-    <p>
-        <b>Key Features:</b>
-    </p>
-
-    <ul>
-        <li>Customer billing details</li>
-        <li>Product quantity, rate and GST calculation</li>
-        <li>CGST, SGST and grand total calculation</li>
-        <li>Professional PDF invoice generation</li>
-        <li>QR code, barcode, bank details and signature section</li>
-    </ul>
-
-    <a href="https://github.com/mohit8059" class="btn" target="_blank">
-        View Project
-    </a>
-    </div>
     <div class="project-card">
         <img src="images/financial_dashboard.png">
-        <h3>Financial Analysis Dashboard</h3>
-        <p><b>Tools Used:</b> Power BI, Excel</p>
-        <p><b>Business Problem:</b> Company needed Budget vs Actual financial performance tracking.</p>
-        <p><b>Key Insights:</b> Analyzed revenue, expenses, profit, variance and financial KPIs.</p>
-        <a href="#" class="btn">View Project</a>
+        <div>
+            <h3>Financial Analysis Dashboard</h3>
+            <p><b>Tools:</b> Power BI, Excel</p>
+            <p>Analyzed revenue, expenses, profit, variance and financial KPIs.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/gst_billing_system.png">
+        <div>
+            <h3>GST Billing System</h3>
+            <p><b>Tools:</b> Python, Tkinter, ReportLab, MySQL</p>
+            <p>Created a GST invoice generator with PDF invoice, GST summary, QR code and billing details.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
     </div>
 </section>
 
-<section id="resume">
-    <h2>Resume</h2>
-    <p>Download my latest resume below.</p>
-    <a href="resume.pdf" download class="btn">Download Resume</a>
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="cards">
+        <div class="card">Created 3+ Power BI Dashboards</div>
+        <div class="card">Built GST Billing System</div>
+        <div class="card">Practiced SQL Queries</div>
+        <div class="card">Built Python Projects</div>
+    </div>
 </section>
 
 <section id="contact">
     <h2>Contact Me</h2>
-
     <p>Email: officialmanak@gmail.com</p>
-
     <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank">
-        View LinkedIn
-    </a>
-</p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank">View LinkedIn</a>
+    </p>
     <p>
         GitHub:
-        <a href="https://github.com/mohit8059" target="_blank">
-            View GitHub
-        </a>
+        <a href="https://github.com/mohit8059" target="_blank">View GitHub</a>
     </p>
 </section>
 
