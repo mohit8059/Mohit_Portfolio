@@ -2,164 +2,324 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mohit Kasana | Data Analyst Portfolio</title>
+    <title>Mohit Kasana | Data Analyst</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <h2>Mohit Kasana</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Mohit</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#programs">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<header class="hero">
-    <div class="hero-text">
-        <h1>Hi, I'm Mohit Kasana</h1>
-        <h2>Data Analyst</h2>
-        <p>
-            I create interactive dashboards, clean data, write SQL queries,
-            and convert raw data into meaningful business insights.
-        </p>
-        <a href="resume.pdf" class="btn" download>Download Resume</a>
-        <a href="#projects" class="btn outline">View Projects</a>
-    </div>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
 
-    <div class="hero-img">
-        <img src="images/profile.jpg">
-    </div>
-</header>
+            <div class="col-md-7">
+                <h1>Mohit Kasana</h1>
+                <h4>Data Analyst | Power BI | SQL | Python</h4>
+                <p>
+                    I create dashboards, analyze data, write SQL queries,
+                    and convert raw data into meaningful business insights.
+                </p>
 
-<section id="offer">
-    <h2>What I Offer</h2>
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+                <a href="resume.pdf" download class="btn btn-success">Download Resume</a>
+            </div>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Power BI Dashboards</h3>
-            <p>Interactive dashboards with KPIs, charts, filters and insights.</p>
-        </div>
+            <div class="col-md-5 text-center">
+                <img src="images/profile.jpg" class="profile-img">
+            </div>
 
-        <div class="card">
-            <h3>SQL Reporting</h3>
-            <p>Data extraction, filtering, joins, grouping and business reports.</p>
-        </div>
-
-        <div class="card">
-            <h3>Excel Analytics</h3>
-            <p>Data cleaning, pivot tables, formulas, charts and dashboards.</p>
-        </div>
-
-        <div class="card">
-            <h3>Python Automation</h3>
-            <p>Automation projects, billing systems and data processing.</p>
         </div>
     </div>
 </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate Data Analyst skilled in Excel, SQL, Power BI, Python,
-        DAX and Data Visualization. I enjoy transforming raw data into meaningful
-        insights and interactive dashboards that support business decision-making.
-    </p>
-    <p>
-        I have hands-on experience in data cleaning, data modeling, dashboard
-        development and reporting. Currently, I am building real-world projects
-        to improve my analytical and technical skills.
-    </p>
-</section>
+<!-- What I Offer -->
+<section class="section">
+    <div class="container">
+        <h5 class="small-heading">What I Offer</h5>
 
-<section id="skills">
-    <h2>Skills & Tools</h2>
-
-    <div class="skills-box">
-        <span>Excel</span>
-        <span>SQL</span>
-        <span>MySQL</span>
-        <span>Power BI</span>
-        <span>DAX</span>
-        <span>Power Query</span>
-        <span>Python</span>
-        <span>GitHub</span>
-        <span>VS Code</span>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="project-card">
-        <img src="images/sales_dashboard.png">
-        <div>
-            <h3>Sales Performance Dashboard</h3>
-            <p><b>Tools:</b> Power BI, Excel, DAX</p>
-            <p>Analyzed sales, profit, orders, products and regional performance.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="images/hr_dashboard.png">
-        <div>
-            <h3>HR Analytics Dashboard</h3>
-            <p><b>Tools:</b> Power BI, Excel, DAX</p>
-            <p>Analyzed employee attrition, department trends and workforce insights.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="images/financial_dashboard.png">
-        <div>
-            <h3>Financial Analysis Dashboard</h3>
-            <p><b>Tools:</b> Power BI, Excel</p>
-            <p>Analyzed revenue, expenses, profit, variance and financial KPIs.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="images/gst_billing_system.png">
-        <div>
-            <h3>GST Billing System</h3>
-            <p><b>Tools:</b> Python, Tkinter, ReportLab, MySQL</p>
-            <p>Created a GST invoice generator with PDF invoice, GST summary, QR code and billing details.</p>
-            <a href="#" class="btn">View Project</a>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="offer-card">✔ Power BI Dashboards</div>
+            </div>
+            <div class="col-md-3">
+                <div class="offer-card">✔ SQL Reporting</div>
+            </div>
+            <div class="col-md-3">
+                <div class="offer-card">✔ Excel Analytics</div>
+            </div>
+            <div class="col-md-3">
+                <div class="offer-card">✔ Python Automation</div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="achievements">
-    <h2>Achievements</h2>
-    <div class="cards">
-        <div class="card">Created 3+ Power BI Dashboards</div>
-        <div class="card">Built GST Billing System</div>
-        <div class="card">Practiced SQL Queries</div>
-        <div class="card">Built Python Projects</div>
+<!-- About -->
+<section id="about" class="section bg-light">
+    <div class="container">
+        <h2>About Me</h2>
+
+        <div class="row">
+            <div class="col-md-7">
+                <p>
+                    I am a passionate Data Analyst skilled in Excel, SQL, Power BI,
+                    Python, DAX and Data Visualization. I enjoy transforming raw data
+                    into meaningful insights and interactive dashboards.
+                </p>
+
+                <p>
+                    My focus is on data cleaning, dashboard development, reporting,
+                    business insights and real-world analytics projects.
+                </p>
+
+                <ul class="check-list">
+                    <li>✔ Practical & Project-Based Learning</li>
+                    <li>✔ Business-Oriented Dashboard Design</li>
+                    <li>✔ Data Cleaning and Reporting</li>
+                    <li>✔ Focus on Real-World Applications</li>
+                </ul>
+            </div>
+
+            <div class="col-md-5">
+                <div class="summary-box">
+                    <h5>Profile Summary</h5>
+                    <p><b>Role:</b> Data Analyst</p>
+                    <p><b>Specialization:</b> Power BI, SQL, Excel, Python</p>
+                    <p><b>Focus:</b> Dashboards & Business Insights</p>
+                    <p><b>Location:</b> Haryana, India</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: officialmanak@gmail.com</p>
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank">View LinkedIn</a>
-    </p>
-    <p>
-        GitHub:
-        <a href="https://github.com/mohit8059" target="_blank">View GitHub</a>
-    </p>
+<!-- Experience -->
+<section id="experience" class="section">
+    <div class="container">
+        <h2>Experience</h2>
+        <p class="text-center">Professional journey in learning, analytics and project development.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5>Data Analytics Learner</h5>
+                <p>2025 – Present</p>
+                <ul>
+                    <li>Building Power BI dashboards and analytics projects.</li>
+                    <li>Practicing SQL queries, Excel dashboards and Python automation.</li>
+                    <li>Creating portfolio projects for real-world business use cases.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h5>Python Project Developer</h5>
+                <p>2025 – Present</p>
+                <ul>
+                    <li>Built GST Billing System using Python and PDF generation.</li>
+                    <li>Worked on Employee Management System with database connectivity.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section bg-light">
+    <div class="container">
+        <h2>Skills</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="skill-card">
+                    <h5>Data Analytics</h5>
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card">
+                    <h5>Database</h5>
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>Joins</span>
+                    <span>Queries</span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="skill-card">
+                    <h5>Programming & Tools</h5>
+                    <span>Python</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+                    <span>Tkinter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services / Programs -->
+<section id="programs" class="section">
+    <div class="container">
+        <h2>Services</h2>
+        <p class="text-center">Things I can create and analyze using data tools.</p>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="program-card">
+                    <h5>Power BI Dashboard</h5>
+                    <p>Sales, HR, Finance and KPI dashboards.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="program-card">
+                    <h5>Excel Reporting</h5>
+                    <p>Data cleaning, pivot tables, formulas and charts.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="program-card">
+                    <h5>Python Automation</h5>
+                    <p>Billing systems, reports and automation projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section bg-light">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="project-card">
+                    <img src="images/sales_dashboard.png">
+                    <h5>Sales Performance Dashboard</h5>
+                    <p>Power BI dashboard for sales, profit, products and region analysis.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="project-card">
+                    <img src="images/hr_dashboard.png">
+                    <h5>HR Analytics Dashboard</h5>
+                    <p>Analyzed attrition, department trends and employee insights.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="project-card">
+                    <img src="images/financial_dashboard.png">
+                    <h5>Financial Analysis Dashboard</h5>
+                    <p>Budget vs actual, revenue, expenses and profit analysis.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="project-card">
+                    <img src="images/gst_billing_system.png">
+                    <h5>GST Billing System</h5>
+                    <p>Python-based GST invoice generator with PDF, QR code and tax summary.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Approach -->
+<section class="section">
+    <div class="container">
+        <h2>My Working Approach</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4"><div class="approach-card">1. Understand Business Problem</div></div>
+            <div class="col-md-4"><div class="approach-card">2. Clean & Prepare Data</div></div>
+            <div class="col-md-4"><div class="approach-card">3. Create Dashboard & Insights</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section bg-dark text-white">
+    <div class="container">
+        <h2 class="text-white">Contact</h2>
+        <p class="text-center">Let’s connect for data analytics projects or opportunities.</p>
+
+        <div class="contact-box">
+            <p><i class="bi bi-envelope"></i> officialmanak@gmail.com</p>
+            <p><i class="bi bi-geo-alt"></i> Haryana, India</p>
+
+            <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank" class="btn btn-primary">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/mohit8059" target="_blank" class="btn btn-light">
+                GitHub
+            </a>
+
+            <a href="mailto:officialmanak@gmail.com" class="btn btn-success">
+                Send Email
+            </a>
+        </div>
+    </div>
 </section>
 
 <footer>
     <p>© 2026 Mohit Kasana | Data Analyst Portfolio</p>
 </footer>
+
+<button id="topBtn">↑</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
