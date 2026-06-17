@@ -381,3 +381,91 @@ footer {
     text-decoration: none;
     font-weight: bold;
 }
+.project-hero {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8, #7c3aed);
+    color: white;
+    padding: 90px 0 60px;
+}
+
+.project-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.project-hero p {
+    max-width: 780px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.project-detail-section {
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    padding: 60px 0;
+}
+
+.project-preview-card,
+.project-info-card,
+.feature-box,
+.content-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
+
+.project-detail-img {
+    width: 100%;
+    max-height: 620px;
+    object-fit: contain;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #f8fafc;
+}
+
+.project-info-card h3,
+.content-card h3 {
+    color: #1d4ed8;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.project-info-card h5 {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.tag-box span {
+    display: inline-block;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+    color: #1e40af;
+    padding: 8px 13px;
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: 700;
+}
+
+.feature-box {
+    height: 100%;
+    border-left: 6px solid #2563eb;
+}
+
+.feature-box h4 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.feature-box h5 {
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.content-card ul,
+.project-info-card ul {
+    margin-bottom: 0;
+}
+
+.content-card li,
+.project-info-card li {
+    margin-bottom: 8px;
+}
