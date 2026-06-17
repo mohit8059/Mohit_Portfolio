@@ -469,3 +469,46 @@ footer {
 .project-info-card li {
     margin-bottom: 8px;
 }
+.contact-info-box,
+.contact-form {
+    background: #111827;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.contact-info-box h4 {
+    color: #60a5fa;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contact-info-box a {
+    color: #93c5fd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact-form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+}
