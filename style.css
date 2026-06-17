@@ -512,3 +512,10 @@ footer {
 .contact-form button:hover {
     background: #1d4ed8;
 }
+.education-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
