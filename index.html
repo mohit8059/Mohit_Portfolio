@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
+    
     <style>
         html {
             scroll-behavior: smooth;
         }
         /* Custom Dark Mode Rules */
-        [data-bs-theme="dark"] .bg-white {
+        [data-bs-theme="dark"] .bg-white,
+        [data-bs-theme="dark"] .bg-light {
             background-color: #212529 !important;
             color: #f8f9fa !important;
         }
         [data-bs-theme="dark"] .skill-card, 
         [data-bs-theme="dark"] .project-card,
         [data-bs-theme="dark"] .education-card,
-        [data-bs-theme="dark"] .metric-card {
+        [data-bs-theme="dark"] .metric-card,
+        [data-bs-theme="dark"] .ai-card,
+        [data-bs-theme="dark"] .approach-card {
             background-color: #2b3035 !important;
             color: #f8f9fa !important;
         }
@@ -65,7 +68,7 @@
             </button>
         </div>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -84,6 +87,7 @@
     </div>
 </nav>
 
+<!-- Hero Section -->
 <section class="hero" style="padding-top: 100px; padding-bottom: 60px;">
     <div class="container">
         <div class="row align-items-center">
@@ -107,6 +111,7 @@
     </div>
 </section>
 
+<!-- Offers Section -->
 <section class="section bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">What I Offer</h2>
@@ -127,6 +132,7 @@
     </div>
 </section>
 
+<!-- About Section -->
 <section id="about" class="section py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">About Me</h2>
@@ -161,6 +167,7 @@
     </div>
 </section>
 
+<!-- Metrics Section -->
 <section id="metrics" class="section bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-2 fw-bold">Data Journey in Numbers</h2>
@@ -198,6 +205,7 @@
     </div>
 </section>
 
+<!-- Skills Section -->
 <section id="skills" class="section py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Skills</h2>
@@ -239,6 +247,7 @@
     </div>
 </section>
 
+<!-- AI Tools Section -->
 <section id="ai-tools" class="section bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-2 fw-bold">AI Tools I Use</h2>
@@ -290,6 +299,7 @@
     </div>
 </section>
 
+<!-- Education Section -->
 <section id="education" class="section py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Education</h2>
@@ -312,6 +322,7 @@
     </div>
 </section>
 
+<!-- Certifications Section -->
 <section id="certifications" class="section bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Certifications</h2>
@@ -330,6 +341,7 @@
     </div>
 </section>
 
+<!-- Key Milestones Section -->
 <section id="achievements" class="section py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Key Milestones</h2>
@@ -348,6 +360,7 @@
     </div>
 </section>
 
+<!-- Experience Section -->
 <section id="experience" class="section bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-2 fw-bold">Experience</h2>
@@ -385,13 +398,13 @@
         <div class="row g-4">
             
             <!-- Project 1 -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
                     <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
                         <img src="images/sales_dashboard.png" class="w-100 h-100 img-fluid" alt="Sales Dashboard" style="object-fit: cover;">
                     </div>
                     <h5 class="fw-bold text-dark">Sales Performance Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Power BI dashboard analyzing key matrices like sales, profit margins, and regional parameters.</p>
+                    <p class="text-muted small flex-grow-1">Power BI dashboard analyzing key metrics like sales, profit margins, and regional parameters.</p>
                     <div class="mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
@@ -400,33 +413,33 @@
                     </div>
                     <div>
                         <a href="sales_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
-                        <a href="https://github.com/mohit8059/sales_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                        <a href="https://github.com/mohit8059/sales_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
                     <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
                         <img src="images/hr_dashboard.png" class="w-100 h-100 img-fluid" alt="HR Dashboard" style="object-fit: cover;">
                     </div>
                     <h5 class="fw-bold text-dark">HR Analytics Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Analyzed employee attrition, workforce demographics, department performance and HR trends to support data-driven decision making.</p>
+                    <p class="text-muted small flex-grow-1">Analyzed employee attrition, workforce demographics, department performance and HR trends.</p>
                     <div class="mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
-                        <span class="badge bg-primary-subtle text-primary m-1">Excel Data Processing</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Excel Processing</span>
                     </div>
                     <div>
                         <a href="hr_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
-                        <a href="https://github.com/mohit8059/hr_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                        <a href="https://github.com/mohit8059/hr_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 3 -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
                     <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
                         <img src="images/financial_dashboard.png" class="w-100 h-100 img-fluid" alt="Financial Dashboard" style="object-fit: cover;">
@@ -440,13 +453,13 @@
                     </div>
                     <div>
                         <a href="financial_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
-                        <a href="https://github.com/mohit8059/FInancial_Dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                        <a href="https://github.com/mohit8059/FInancial_Dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 4 -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
                     <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
                         <img src="images/gst_billing_system.png" class="w-100 h-100 img-fluid" alt="GST System" style="object-fit: cover;">
@@ -461,126 +474,58 @@
                     </div>
                     <div>
                         <a href="gst_billing_system.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
-                        <a href="https://github.com/mohit8059/gst_billing_system" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                        <a href="https://github.com/mohit8059/gst_billing_system" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </div>
+            <!-- Project 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
+                        <img src="images/nifty_dashboard.png" class="w-100 h-100 img-fluid" alt="NIFTY Dashboard" style="object-fit: cover;">
+                    </div>
+                    <h5 class="fw-bold text-dark">NIFTY Stock Market Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">An interactive Power BI dashboard designed to analyze stock price trends, trading volume, and returns.</p>
+                    <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power Query</span>
+                    </div>
+                    <div>
+                        <a href="nifty_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/nifty_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
+                        <img src="images/ipl_analytics_dashboard.png" class="w-100 h-100 img-fluid" alt="IPL Dashboard" style="object-fit: cover;">
+                    </div>
+                    <h5 class="fw-bold text-dark">IPL Analytics Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">Interactive Power BI dashboard designed to analyze IPL team performance, player statistics, and match trends.</p>
+                    <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Excel</span>
+                    </div>
+                    <div>
+                        <a href="ipl_analytics_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/ipl_analytics_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /row -->
+    </div> <!-- /container -->
 </section>
-<div class="col-lg-6 col-md-6"
-    <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
 
-        <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-            <img src="images/nifty_dashboard.png"
-                 class="w-100 h-100 img-fluid"
-                 alt="NIFTY Dashboard"
-                 style="object-fit: cover;">
-        </div>
-
-        <h5 class="fw-bold text-dark">
-            NIFTY Stock Market Dashboard
-        </h5>
-
-        <p class="text-muted small flex-grow-1">
-            An interactive Power BI dashboard designed to analyze stock price trends,
-            trading volume, returns, top gainers and top losers from NIFTY stocks.
-        </p>
-
-        <div class="mb-3">
-            <strong class="small text-dark d-block mb-1">
-                Tools Used:
-            </strong>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                Power BI
-            </span>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                DAX
-            </span>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                Power Query
-            </span>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                Excel
-            </span>
-        </div>
-
-        <div>
-            <a href="nifty_dashboard.html?v=2"
-               class="btn btn-primary btn-sm me-2">
-               View Project
-            </a>
-
-            <a href="https://github.com/mohit8059/nifty_dashboard"
-               class="btn btn-outline-dark btn-sm"
-               target="_blank">
-               View GitHub Repo
-            </a>
-        </div>
-
-    </div>
-</div>
-<div class="col-lg-6 col-md-6">
-    <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-
-        <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-            <img src="images/ipl_analytics_dashboard.png"
-                 class="w-100 h-100 img-fluid"
-                 alt="IPL Dashboard"
-                 style="object-fit: cover;">
-        </div>
-
-        <h5 class="fw-bold text-dark">
-            IPL Analytics Dashboard
-        </h5>
-
-        <p class="text-muted small flex-grow-1">
-            Interactive Power BI dashboard designed to analyze IPL team performance,
-            player statistics, runs, wickets, strike rates, points table and match trends.
-        </p>
-
-        <div class="mb-3">
-            <strong class="small text-dark d-block mb-1">
-                Tools Used:
-            </strong>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                Power BI
-            </span>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                DAX
-            </span>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                Power Query
-            </span>
-
-            <span class="badge bg-primary-subtle text-primary m-1">
-                Excel
-            </span>
-        </div>
-
-        <div>
-            <a href="ipl_analytics_dashboard.html?v=2"
-               class="btn btn-primary btn-sm me-2">
-               View Project
-            </a>
-
-            <a href="https://github.com/mohit8059/ipl_analytics_dashboard"
-               class="btn btn-outline-dark btn-sm"
-               target="_blank">
-               View GitHub Repo
-            </a>
-        </div>
-
-    </div>
-</div>    
+<!-- Working Approach Section -->
 <section class="section bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">My Working Approach</h2>
@@ -607,6 +552,7 @@
     </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="section bg-dark text-white py-5">
     <div class="container">
         <h2 class="text-white text-center mb-2 fw-bold">Contact Me</h2>
@@ -619,17 +565,13 @@
                     <p class="mb-3">📧 <a href="mailto:mohit805959@gmail.com" class="text-white text-decoration-none">mohit805959@gmail.com</a></p>
                     <p class="mb-3">📱 <a href="tel:+918571800887" class="text-white text-decoration-none">+91 8571800887</a></p>
                     <p class="mb-3">💼 <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank" class="text-white text-decoration-none">LinkedIn</a></p>
-                   <p class="mb-0">💻 <a href="https://github.com/mohit8059" target="_blank" class="text-white text-decoration-none">GitHub</a></p>
-                                    
+                    <p class="mb-0">💻 <a href="https://github.com/mohit8059" target="_blank" class="text-white text-decoration-none">GitHub</a></p>
                 </div>
             </div>
 
             <div class="col-md-7">
                 <form action="https://formsubmit.co/mohit805959@gmail.com" method="POST" class="contact-form bg-secondary bg-opacity-10 p-4 rounded shadow-sm">
                     <input type="hidden" name="_subject" value="New Portfolio Contact Message">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://mohit8059.github.io/Mohit_Portfolio/thankyou.html">
-
                     <div class="mb-3">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
@@ -637,43 +579,62 @@
                         <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
                     <div class="mb-3">
-                        <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number">
+                        <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                     </div>
-                    <div class="mb-3">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Send Message</button>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
                 </form>
-                
-        </div>
-
-        <p class="mb-0">
-            © 2026 Mohit Kasana | All Rights Reserved |
-        </p>
-
-    </div>
-</footer>
             </div>
         </div>
     </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-20">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            
+            <!-- Column 1: Short Bio -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">Mohit Kasana</h5>
+                <p class="small text-muted">
+                    Data Analyst passionate about turning raw data into interactive dashboards, meaningful insights, and efficient automation scripts.
+                </p>
+            </div>
 
-<script>
-    const toggleBtn = document.getElementById('darkModeToggle');
-    toggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-        if (currentTheme === 'dark') {
-            document.documentElement.removeAttribute('data-bs-theme');
-            toggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
-            toggleBtn.classList.replace('btn-light', 'btn-outline-light');
-        } else {
-            document.documentElement.setAttribute('data-bs-theme', 'dark');
-            toggleBtn.innerHTML = '<i class="bi bi-sun-fill text-warning"></i>';
-            toggleBtn.classList.replace('btn-outline-light', 'btn-light');
-        }
-    });
-</script>
+            <!-- Column 2: Quick Links -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">Quick Links</h5>
+                <p class="mb-2"><a href="#about" class="text-white text-decoration-none small text-muted"><i class="bi bi-chevron-right me-1"></i> About Me</a></p>
+                <p class="mb-2"><a href="#skills" class="text-white text-decoration-none small text-muted"><i class="bi bi-chevron-right me-1"></i> Skills</a></p>
+                <p class="mb-2"><a href="#projects" class="text-white text-decoration-none small text-muted"><i class="bi bi-chevron-right me-1"></i> Projects</a></p>
+                <p class="mb-2"><a href="#contact" class="text-white text-decoration-none small text-muted"><i class="bi bi-chevron-right me-1"></i> Contact</a></p>
+            </div>
+
+            <!-- Column 3: Social/Professional Links -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-center text-md-end">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">Connect</h5>
+                <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/mohit8059" target="_blank" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="bi bi-github"></i></a>
+                <a href="mailto:mohit805959@gmail.com" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+
+        </div>
+
+        <hr class="mb-4 mt-4 bg-secondary">
+
+        <!-- Copyright Row & Back to Top -->
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <p class="small text-muted mb-0">© 2026 Mohit Kasana. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-5 col-lg-4 text-center text-md-end mt-3 mt-md-0">
+                <a href="#" class="text-white text-decoration-none small text-muted">Back to top <i class="bi bi-arrow-up-circle-fill text-primary fs-5 ms-1 align-middle"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
