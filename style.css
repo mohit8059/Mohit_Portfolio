@@ -561,3 +561,21 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+.footer-section{
+    background:#0f172a;
+    color:white;
+    padding:60px 0 20px;
+}
+
+.footer-section a{
+    color:#cbd5e1;
+    text-decoration:none;
+}
+
+.footer-section a:hover{
+    color:#3b82f6;
+}
+
+.footer-section hr{
+    border-color:#334155;
+}
