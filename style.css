@@ -542,3 +542,8 @@ footer {
     color: #1d4ed8;
     font-weight: 800;
 }
+.project-card img{
+    height:250px;
+    width:100%;
+    object-fit:cover;
+}
