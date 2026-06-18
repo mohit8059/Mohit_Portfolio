@@ -19,7 +19,7 @@ Power BI dashboard created to analyze IPL teams, players,
 runs, wickets, strike rate and match performance.
 </p>
 
-<img src="images/ipl_dashboard.png"
+<img src="images/ipl_analytics_dashboard.png"
      class="img-fluid rounded shadow mb-4">
 
 <h3>Tools Used</h3>
@@ -58,7 +58,7 @@ provides quick insights into player and team performance.
 <li>Team performance compared</li>
 </ul>
 
-<a href="https://github.com/mohit8059/ipl-analytics-dashboard"
+<a href="https://github.com/mohit8059/ipl_analytics_dashboard"
    target="_blank"
    class="btn btn-dark">
 View GitHub Project
