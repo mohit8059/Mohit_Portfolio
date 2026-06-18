@@ -2,114 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mohit Kasana | Data Analyst Portfolio</title>
+    <title>Mohit Kasana | Data Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- Bootstrap -->
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Icons -->
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
     <style>
         html {
             scroll-behavior: smooth;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+        /* Custom Dark Mode Rules */
+        [data-bs-theme="dark"] .bg-white {
+            background-color: #212529 !important;
+            color: #f8f9fa !important;
         }
-        
-        /* --- BRAND NEW COLOURFUL GRADIENT HEADINGS --- */
-        .gradient-text {
-            background: linear-gradient(45deg, #0d6efd, #198754, #fd7e14);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
-
-        /* Hero Section Gradient Pulse Background */
-        .hero {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%; right: -20%;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(13,110,253,0.3) 0%, rgba(0,0,0,0) 70%);
-            border-radius: 50%;
-        }
-
-        /* --- COLOURFUL ACCHIEVEMENTS & TIMELINE CARDS --- */
-        .accent-card-blue { border-left: 5px solid #0d6efd !important; }
-        .accent-card-success { border-left: 5px solid #198754 !important; }
-        .accent-card-warning { border-left: 5px solid #ffc107 !important; }
-        .accent-card-purple { border-left: 5px solid #6f42c1 !important; }
-
-        /* Metric Cards Vibrant Hover Effect */
-        .metric-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .metric-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
-        }
-
-        /* --- PREMIUM GLOWING GLASS EFFECT FOR AI TOOLS --- */
-        .ai-glow-card {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(13, 110, 253, 0.1);
-            transition: all 0.3s ease;
-        }
-        .ai-glow-card:hover {
-            background: #fff;
-            border-color: #6f42c1;
-            box-shadow: 0 8px 20px rgba(111, 66, 193, 0.15) !important;
-        }
-
-        /* Project Card Styling */
-        .project-card {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08) !important;
-        }
-
-        /* Dark Mode Fixes */
-        [data-bs-theme="dark"] body { background-color: #121212; }
-        [data-bs-theme="dark"] .bg-white { background-color: #1e1e1e !important; color: #f8f9fa !important; }
         [data-bs-theme="dark"] .skill-card, 
         [data-bs-theme="dark"] .project-card,
         [data-bs-theme="dark"] .education-card,
-        [data-bs-theme="dark"] .metric-card,
-        [data-bs-theme="dark"] .timeline-item,
-        [data-bs-theme="dark"] .ai-glow-card {
-            background-color: #1e1e1e !important;
+        [data-bs-theme="dark"] .metric-card {
+            background-color: #2b3035 !important;
             color: #f8f9fa !important;
+        }
+        [data-bs-theme="dark"] .text-dark {
+            color: #f8f9fa !important;
+        }
+        .metric-card {
+            transition: transform 0.3s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom border-secondary">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar bg-dark">
     <div class="container">
-        <a class="navbar-brand fw-bold text-info" href="#"><i class="bi bi-bar-chart-fill me-2"></i>Mohit.Analytics</a>
+        <a class="navbar-brand fw-bold" href="#">Mohit</a>
+
         <div class="d-flex align-items-center order-lg-3 ms-2">
             <button class="btn btn-outline-light btn-sm rounded-circle me-2" id="darkModeToggle" title="Toggle Dark/Light Mode">
                 <i class="bi bi-moon-stars-fill"></i>
             </button>
         </div>
+
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -125,115 +85,127 @@
     </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero d-flex align-items-center" style="padding-top: 140px; padding-bottom: 80px; min-height: 70vh;">
+<section class="hero" style="padding-top: 100px; padding-bottom: 60px;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-7">
-                <span class="badge bg-info text-dark mb-2 px-3 py-2 rounded-pill fw-bold">Data Scientist & Analyst Ecosystem</span>
-                <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-warning">Mohit Kasana</span></h1>
-                <h3 class="text-light opacity-75 mb-4">Transforming Messy Raw Data Into Beautiful Business Strategies</h3>
+                <h1>Mohit Kasana</h1>
+                <h4>Data Analyst | Power BI | SQL | Python</h4>
+                <p>
+                    I create dashboards, analyze data, write SQL queries,
+                    and convert raw data into meaningful business insights.
+                </p>
                 <div class="hero-buttons mt-4">
-                    <a href="#projects" class="btn btn-warning btn-lg me-2 fw-bold text-dark shadow">Explore Dashboards</a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg me-2">Let's Talk</a>
-                    <a href="resume.pdf" download class="btn btn-success btn-lg"><i class="bi bi-download me-1"></i> CV</a>
+                    <a href="#projects" class="btn btn-primary me-2">View Projects</a>
+                    <a href="#contact" class="btn btn-outline-light me-2">Contact Me</a>
+                    <a href="resume.pdf" download class="btn btn-success">Download Resume</a>
                 </div>
             </div>
             <div class="col-md-5 text-center mt-4 mt-md-0">
-                <div class="position-relative d-inline-block">
-                    <img src="images/profile.jpg" class="profile-img img-fluid rounded-circle border border-4 border-info shadow-lg" alt="Mohit Kasana" style="max-width: 260px;">
-                </div>
+                <img src="images/profile.jpg" class="profile-img img-fluid rounded-circle" alt="Mohit Kasana" style="max-width: 250px;">
             </div>
         </div>
     </div>
 </section>
 
-<!-- What I Offer Section -->
-<section class="section py-5 bg-white">
+<section class="section bg-light py-5">
     <div class="container">
-        <h2 class="text-center mb-5 gradient-text">Analytical Offerings</h2>
-        <div class="row g-4 text-center">
-            <div class="col-md-3"><div class="p-4 shadow-sm rounded bg-light accent-card-blue fw-bold text-primary"><i class="bi bi-layout-wtext-sidebar fs-3 d-block mb-2"></i>Power BI Dashboards</div></div>
-            <div class="col-md-3"><div class="p-4 shadow-sm rounded bg-light accent-card-success fw-bold text-success"><i class="bi bi-database-fill-gear fs-3 d-block mb-2"></i>SQL Architecture</div></div>
-            <div class="col-md-3"><div class="p-4 shadow-sm rounded bg-light accent-card-warning fw-bold text-warning"><i class="bi bi-file-earmark-excel-fill fs-3 d-block mb-2"></i>Excel Macro Systems</div></div>
-            <div class="col-md-3"><div class="p-4 shadow-sm rounded bg-light accent-card-purple fw-bold text-purple" style="color: #6f42c1;"><i class="bi bi-braces-asterisk fs-3 d-block mb-2"></i>Python Automation</div></div>
+        <h2 class="text-center mb-5 fw-bold">What I Offer</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="offer-card p-3 text-center shadow-sm bg-white rounded fw-semibold">✔ Power BI Dashboards</div>
+            </div>
+            <div class="col-md-3">
+                <div class="offer-card p-3 text-center shadow-sm bg-white rounded fw-semibold">✔ SQL Reporting</div>
+            </div>
+            <div class="col-md-3">
+                <div class="offer-card p-3 text-center shadow-sm bg-white rounded fw-semibold">✔ Excel Analytics</div>
+            </div>
+            <div class="col-md-3">
+                <div class="offer-card p-3 text-center shadow-sm bg-white rounded fw-semibold">✔ Python Automation</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- About Section -->
 <section id="about" class="section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 gradient-text">About My Data Philosophy</h2>
+        <h2 class="text-center mb-5 fw-bold">About Me</h2>
         <div class="row align-items-center">
             <div class="col-md-7">
-                <p class="fs-5 text-muted">
-                    I believe that behind every spreadsheet and database lies a story waiting to be optimized. As a passionate Data Analyst, I don't just clear errors—I scale clarity.
+                <p>
+                    I am a passionate Data Analyst skilled in Excel, SQL, Power BI,
+                    Python, DAX and Data Visualization. I enjoy transforming raw data
+                    into meaningful insights and interactive dashboards.
                 </p>
-                <ul class="check-list list-unstyled fs-6 mt-4">
-                    <li class="mb-3"><i class="bi bi-patch-check-fill text-primary me-2"></i> End-to-End Database Management (CRUD & Joins)</li>
-                    <li class="mb-3"><i class="bi bi-patch-check-fill text-success me-2"></i> User-Friendly Executive Dashboards for Stakeholders</li>
-                    <li class="mb-3"><i class="bi bi-patch-check-fill text-warning me-2"></i> Performance Tuning & Data Preparation Flows</li>
+                <p>
+                    My focus is on data cleaning, dashboard development, reporting,
+                    business insights and real-world analytics projects.
+                </p>
+                <ul class="check-list list-unstyled fs-6 mt-3">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Practical & Project-Based Learning</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Business-Oriented Dashboard Design</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Data Cleaning and Reporting</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Focus on Real-World Applications</li>
                 </ul>
             </div>
-            <div class="col-md-5">
-                <div class="summary-box p-4 bg-white shadow rounded accent-card-blue">
-                    <h5 class="fw-bold text-dark border-bottom pb-2 mb-3">Quick Dossier</h5>
-                    <p class="mb-2"><b>Identity:</b> Systems & Data Engineer</p>
-                    <p class="mb-2"><b>Core Techstack:</b> Power BI, PostgreSQL, Pandas</p>
-                    <p class="mb-2"><b>HQ Base:</b> Haryana, India</p>
+            <div class="col-md-5 mt-4 mt-md-0">
+                <div class="summary-box p-4 bg-light shadow-sm rounded">
+                    <h5 class="border-bottom pb-2 mb-3 fw-bold">Profile Summary</h5>
+                    <p><b>Role:</b> Data Analyst</p>
+                    <p><b>Specialization:</b> Power BI, SQL, Excel, Python</p>
+                    <p><b>Focus:</b> Dashboards & Business Insights</p>
+                    <p><b>Location:</b> Haryana, India</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Interactive Resume Metrics Section -->
-<section id="metrics" class="section bg-white py-5">
+<section id="metrics" class="section bg-light py-5">
     <div class="container">
-        <h2 class="text-center mb-2 gradient-text">The Data Journey In Metrics</h2>
-        <p class="text-center text-muted mb-5">Quantifying performance indexes and data operations.</p>
+        <h2 class="text-center mb-2 fw-bold">Data Journey in Numbers</h2>
+        <p class="text-center text-muted mb-5">Quantifying my analytical capabilities and project impact</p>
         <div class="row g-4 text-center">
             <div class="col-md-3 col-sm-6">
-                <div class="metric-card p-4 bg-light shadow-sm rounded accent-card-blue">
+                <div class="metric-card p-4 bg-white shadow-sm rounded border-top border-primary border-4">
                     <i class="bi bi-terminal-box text-primary fs-1 mb-2"></i>
                     <h3 class="fw-bold text-dark m-0">500+</h3>
-                    <p class="text-muted small mb-0 mt-1">Queries Architected</p>
+                    <p class="text-muted small mb-0 mt-1">SQL Queries Practiced</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="metric-card p-4 bg-light shadow-sm rounded accent-card-success">
+                <div class="metric-card p-4 bg-white shadow-sm rounded border-top border-success border-4">
                     <i class="bi bi-database-check text-success fs-1 mb-2"></i>
                     <h3 class="fw-bold text-dark m-0">2M+ Rows</h3>
-                    <p class="text-muted small mb-0 mt-1">Cleaned & Parsed</p>
+                    <p class="text-muted small mb-0 mt-1">Raw Data Cleaned</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="metric-card p-4 bg-light shadow-sm rounded accent-card-warning">
+                <div class="metric-card p-4 bg-white shadow-sm rounded border-top border-warning border-4">
                     <i class="bi bi-speedometer2 text-warning fs-1 mb-2"></i>
                     <h3 class="fw-bold text-dark m-0">25+</h3>
-                    <p class="text-muted small mb-0 mt-1">Business KPIs Audited</p>
+                    <p class="text-muted small mb-0 mt-1">KPIs Monitored & Managed</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="metric-card p-4 bg-light shadow-sm rounded accent-card-purple">
-                    <i class="bi bi-cpu text-purple fs-1 mb-2" style="color: #6f42c1;"></i>
+                <div class="metric-card p-4 bg-white shadow-sm rounded border-top border-danger border-4">
+                    <i class="bi bi-cpu text-danger fs-1 mb-2"></i>
                     <h3 class="fw-bold text-dark m-0">40+ Hours</h3>
-                    <p class="text-muted small mb-0 mt-1">Saved via Automation</p>
+                    <p class="text-muted small mb-0 mt-1">Saved via Python Scripts</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Skills Section -->
 <section id="skills" class="section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 gradient-text">Core Competence Matrix</h2>
+        <h2 class="text-center mb-5 fw-bold">Skills</h2>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="skill-card p-4 bg-white shadow rounded h-100 accent-card-blue">
-                    <h5 class="pb-2 mb-3 text-primary fw-bold">Data Analytics</h5>
+                <div class="skill-card p-4 bg-white shadow-sm rounded h-100 border-0">
+                    <h5 class="border-bottom pb-2 mb-3 text-primary fw-bold">Data Analytics</h5>
                     <div class="d-flex flex-wrap gap-2">
                         <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill fs-6">Excel</span>
                         <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill fs-6">Power BI</span>
@@ -243,8 +215,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="skill-card p-4 bg-white shadow rounded h-100 accent-card-success">
-                    <h5 class="pb-2 mb-3 text-success fw-bold">Database Architecture</h5>
+                <div class="skill-card p-4 bg-white shadow-sm rounded h-100 border-0">
+                    <h5 class="border-bottom pb-2 mb-3 text-success fw-bold">Database</h5>
                     <div class="d-flex flex-wrap gap-2">
                         <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fs-6">SQL</span>
                         <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fs-6">MySQL</span>
@@ -254,8 +226,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="skill-card p-4 bg-white shadow rounded h-100 accent-card-purple">
-                    <h5 class="pb-2 mb-3 fw-bold" style="color: #6f42c1;">Programming & Scripts</h5>
+                <div class="skill-card p-4 bg-white shadow-sm rounded h-100 border-0">
+                    <h5 class="border-bottom pb-2 mb-3 text-dark fw-bold">Programming & Tools</h5>
                     <div class="d-flex flex-wrap gap-2">
                         <span class="badge bg-dark-subtle text-dark border border-dark-subtle px-3 py-2 rounded-pill fs-6">Python</span>
                         <span class="badge bg-dark-subtle text-dark border border-dark-subtle px-3 py-2 rounded-pill fs-6">GitHub</span>
@@ -268,65 +240,138 @@
     </div>
 </section>
 
-<!-- AI Tools Section -->
-<section id="ai-tools" class="section bg-white py-5">
+<section id="ai-tools" class="section bg-light py-5">
     <div class="container">
-        <h2 class="text-center mb-2 gradient-text">Next-Gen AI Stack Integration</h2>
-        <p class="text-center text-muted mb-5">Accelerating standard operational tasks via AI agents.</p>
+        <h2 class="text-center mb-2 fw-bold">AI Tools I Use</h2>
+        <p class="text-center text-muted mb-5">AI tools I use to improve productivity, research, reporting and data analysis workflow.</p>
         <div class="row g-4 justify-content-center">
-            <div class="col-md-4 col-lg-3"><div class="ai-glow-card p-3 shadow-sm rounded h-100 text-center accent-card-purple"><h5 class="fw-bold">ChatGPT</h5><p class="small text-muted mb-0">DAX logics and pipeline generation.</p></div></div>
-            <div class="col-md-4 col-lg-3"><div class="ai-glow-card p-3 shadow-sm rounded h-100 text-center accent-card-blue"><h5 class="fw-bold">MS Copilot</h5><p class="small text-muted mb-0">Excel structures and M query checks.</p></div></div>
-            <div class="col-md-4 col-lg-3"><div class="ai-glow-card p-3 shadow-sm rounded h-100 text-center accent-card-success"><h5 class="fw-bold">Google Gemini</h5><p class="small text-muted mb-0">Data parsing research and reporting.</p></div></div>
-            <div class="col-md-4 col-lg-3"><div class="ai-glow-card p-3 shadow-sm rounded h-100 text-center accent-card-warning"><h5 class="fw-bold">Claude AI</h5><p class="small text-muted mb-0">Business documentation and metrics parsing.</p></div></div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">ChatGPT</h5>
+                    <p class="small text-muted mb-0">Data analysis support, DAX logic and SQL explanation.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">Microsoft Copilot</h5>
+                    <p class="small text-muted mb-0">Excel, Power BI and productivity support.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">Google Gemini</h5>
+                    <p class="small text-muted mb-0">Research, content generation and data interpretation.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">Claude AI</h5>
+                    <p class="small text-muted mb-0">Document analysis and business requirement understanding.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">NotebookLM</h5>
+                    <p class="small text-muted mb-0">Document summarization, notes analysis and study material understanding.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">GitHub Copilot</h5>
+                    <p class="small text-muted mb-0">Code assistance, Python development and automation.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="ai-card p-3 bg-white shadow-sm rounded h-100 text-center">
+                    <h5 class="fw-bold">Perplexity AI</h5>
+                    <p class="small text-muted mb-0">Research-backed insights and information gathering.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Education Section -->
 <section id="education" class="section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 gradient-text">Education & Training</h2>
+        <h2 class="text-center mb-5 fw-bold">Education</h2>
         <div class="row g-4 justify-content-center">
             <div class="col-md-6">
-                <div class="education-card p-4 bg-white shadow rounded h-100 accent-card-blue">
-                    <h4 class="fw-bold text-dark">Bachelor of Arts (B.A.)</h4>
+                <div class="education-card p-4 bg-light shadow-sm rounded h-100">
+                    <h4 class="fw-bold">Bachelor of Arts (B.A.)</h4>
                     <p class="text-primary mb-1"><strong>Indira Gandhi University (IGU)</strong></p>
-                    <p class="text-muted mb-0">Graduation Timeline: 2024</p>
+                    <p class="text-muted mb-0">Graduation Year: 2024</p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="education-card p-4 bg-white shadow rounded h-100 accent-card-success">
-                    <h4 class="fw-bold text-dark">Advanced Data Analytics Track</h4>
-                    <p class="text-success mb-2"><strong>Zillionsoftech Institute</strong></p>
-                    <p class="small text-muted mb-0">Specialized in SQL Warehouses, Excel modeling, and Power BI schemas.</p>
+                <div class="education-card p-4 bg-light shadow-sm rounded h-100">
+                    <h4 class="fw-bold">Data Analytics Training</h4>
+                    <p class="text-primary mb-2"><strong>Zillionsoftech Institute</strong></p>
+                    <p class="small text-muted mb-0">Excel, SQL, Power BI, Python, DAX, Power Query</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Experience Section -->
-<section id="experience" class="section bg-white py-5">
+<section id="certifications" class="section bg-light py-5">
     <div class="container">
-        <h2 class="text-center mb-5 gradient-text">Ecosystem Milestones & Journey</h2>
+        <h2 class="text-center mb-5 fw-bold">Certifications</h2>
+        <div class="row g-3 justify-content-center">
+            <div class="col-sm-6 col-md-4">
+                <div class="p-3 bg-white text-center shadow-sm rounded border-start border-primary border-4">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i><strong>Power BI Certification</strong>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="p-3 bg-white text-center shadow-sm rounded border-start border-success border-4">
+                    <i class="bi bi-patch-check-fill text-success me-2"></i><strong>Excel Certification</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="achievements" class="section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Key Milestones</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 shadow-sm bg-light p-4 rounded">
+                <ul class="list-group list-group-flush fs-6 bg-transparent">
+                    <li class="list-group-item bg-transparent"><i class="bi bi-trophy-fill text-warning me-2"></i> 500+ SQL Queries Practiced</li>
+                    <li class="list-group-item bg-transparent"><i class="bi bi-trophy-fill text-warning me-2"></i> 4+ Analytics Projects Completed</li>
+                    <li class="list-group-item bg-transparent"><i class="bi bi-trophy-fill text-warning me-2"></i> 3+ Interactive Power BI Dashboards Created</li>
+                    <li class="list-group-item bg-transparent"><i class="bi bi-trophy-fill text-warning me-2"></i> Built GST Billing System using Python</li>
+                    <li class="list-group-item bg-transparent"><i class="bi bi-trophy-fill text-warning me-2"></i> Built Student Management System using Python</li>
+                    <li class="list-group-item bg-transparent"><i class="bi bi-trophy-fill text-warning me-2"></i> Developed Employee Management System</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold">Experience</h2>
+        <p class="text-center text-muted mb-5">Professional journey in learning, analytics and project development.</p>
         <div class="row g-4 justify-content-center">
             <div class="col-md-6">
-                <div class="timeline-item p-4 bg-light shadow-sm rounded h-100 accent-card-purple">
-                    <h5 class="text-dark fw-bold">Data Analytics Engineering</h5>
-                    <span class="badge bg-purple mb-3" style="background-color: #6f42c1;">2025 – Continuous</span>
+                <div class="timeline-item p-4 bg-white shadow-sm rounded h-100">
+                    <h5 class="text-primary fw-bold">Data Analytics Learner</h5>
+                    <span class="badge bg-dark mb-3">2025 – Present</span>
                     <ul class="small ps-3 text-muted">
-                        <li>Building complex diagnostic and reporting matrix flows.</li>
-                        <li>Configuring relational schemas using MySQL & Joins.</li>
+                        <li>Building Power BI dashboards and analytics projects.</li>
+                        <li>Practicing SQL queries, Excel dashboards and Python automation.</li>
+                        <li>Creating portfolio projects for real-world business use cases.</li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="timeline-item p-4 bg-light shadow-sm rounded h-100 accent-card-warning">
-                    <h5 class="text-dark fw-bold">Python Automation Architecture</h5>
-                    <span class="badge bg-warning text-dark mb-3">2025 – Continuous</span>
+                <div class="timeline-item p-4 bg-white shadow-sm rounded h-100">
+                    <h5 class="text-primary fw-bold">Python Project Developer</h5>
+                    <span class="badge bg-dark mb-3">2025 – Present</span>
                     <ul class="small ps-3 text-muted">
-                        <li>Engineered custom standalone accounting and tracking desktop tools.</li>
-                        <li>Automated local Excel processes minimizing manual calculation hours.</li>
+                        <li>Built GST Billing System using Python and PDF generation.</li>
+                        <li>Worked on Employee Management System with database connectivity.</li>
                     </ul>
                 </div>
             </div>
@@ -335,45 +380,133 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="section py-5">
+<section id="projects" class="section py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-5 gradient-text">Case Studies & Production Dashboards</h2>
+        <h2 class="text-center mb-5 fw-bold">Projects</h2>
         <div class="row g-4">
             
             <!-- Project 1 -->
             <div class="col-md-6">
-                <div class="project-card p-3 bg-white shadow rounded h-100 d-flex flex-column accent-card-blue">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 240px;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
                         <img src="images/sales_dashboard.png" class="w-100 h-100 img-fluid" alt="Sales Dashboard" style="object-fit: cover;">
                     </div>
-                    <h5 class="fw-bold text-dark">Sales Diagnostic Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Integrated Multi-regional tracking engine targeting profitability index matrices.</p>
+                    <h5 class="fw-bold text-dark">Sales Performance Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">Power BI dashboard analyzing key matrices like sales, profit margins, and regional parameters.</p>
                     <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Power Query</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
                     </div>
                     <div>
-                        <a href="sales_dashboard.html?v=2" class="btn btn-primary btn-sm me-2 fw-bold">Launch Case</a>
-                        <a href="https://github.com/mohit8059/sales_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">Repository</a>
+                        <a href="sales_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/sales_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="col-md-6">
-                <div class="project-card p-3 bg-white shadow rounded h-100 d-flex flex-column accent-card-success">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 240px;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
                         <img src="images/hr_dashboard.png" class="w-100 h-100 img-fluid" alt="HR Dashboard" style="object-fit: cover;">
                     </div>
-                    <h5 class="fw-bold text-dark">Corporate HR Analytics Hub</h5>
-                    <p class="text-muted small flex-grow-1">Monitored company attrition rates, personnel demographic balances and structural changes.</p>
+                    <h5 class="fw-bold text-dark">HR Analytics Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">Analyzed employee attrition, workforce demographics, department performance and HR trends to support data-driven decision making.</p>
                     <div class="mb-3">
-                        <span class="badge bg-success-subtle text-success m-1">Power BI</span>
-                        <span class="badge bg-success-subtle text-success m-1">Excel Modeling</span>
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Excel Data Processing</span>
                     </div>
                     <div>
-                        <a href="hr_dashboard.html?v=2" class="btn btn-success btn-sm me-2 fw-bold">Launch Case</a>
-                        <a href="https://github.com/mohit8059/hr_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">Repository</a>
+                        <a href="hr_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/hr_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
+                        <img src="images/financial_dashboard.png" class="w-100 h-100 img-fluid" alt="Financial Dashboard" style="object-fit: cover;">
+                    </div>
+                    <h5 class="fw-bold text-dark">Financial Analysis Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">Budget vs actual metrics, custom revenues trackers and operational metrics parameters.</p>
+                    <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Advanced SQL</span>
+                    </div>
+                    <div>
+                        <a href="financial_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/FInancial_Dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-6">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
+                        <img src="images/gst_billing_system.png" class="w-100 h-100 img-fluid" alt="GST System" style="object-fit: cover;">
+                    </div>
+                    <h5 class="fw-bold text-dark">GST Billing System</h5>
+                    <p class="text-muted small flex-grow-1">Python interactive desktop software handling system generation, structural summaries and DB connections.</p>
+                    <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Python</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Tkinter GUI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">MySQL</span>
+                    </div>
+                    <div>
+                        <a href="gst_billing_system.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/gst_billing_system" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-md-6">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
+                        <img src="images/nifty_dashboard.png" class="w-100 h-100 img-fluid" alt="NIFTY Dashboard" style="object-fit: cover;">
+                    </div>
+                    <h5 class="fw-bold text-dark">NIFTY Stock Market Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">An interactive Power BI dashboard designed to analyze stock price trends, trading volume, returns, top gainers and top losers from NIFTY stocks.</p>
+                    <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power Query</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Excel</span>
+                    </div>
+                    <div>
+                        <a href="nifty_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/nifty_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-md-6">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
+                        <img src="images/ipl_analytics_dashboard.png" class="w-100 h-100 img-fluid" alt="IPL Dashboard" style="object-fit: cover;">
+                    </div>
+                    <h5 class="fw-bold text-dark">IPL Analytics Dashboard</h5>
+                    <p class="text-muted small flex-grow-1">Interactive Power BI dashboard designed to analyze IPL team performance, player statistics, runs, wickets, strike rates, points table and match trends.</p>
+                    <div class="mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Power Query</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Excel</span>
+                    </div>
+                    <div>
+                        <a href="ipl_analytics_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/ipl_analytics_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">View GitHub Repo</a>
                     </div>
                 </div>
             </div>
@@ -382,47 +515,104 @@
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section bg-dark text-white py-5 border-top border-warning border-4">
+<section class="section bg-light py-5">
     <div class="container">
-        <h2 class="text-warning text-center mb-2 fw-bold">Initialize Connection</h2>
-        <p class="text-center text-muted mb-5">Ready to onboard for new analytical deployments and consulting contracts.</p>
+        <h2 class="text-center mb-5 fw-bold">My Working Approach</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="approach-card p-4 bg-white shadow-sm rounded border-bottom border-primary border-4">
+                    <h5 class="text-primary fw-bold">1. Business Problem</h5>
+                    <p class="small text-muted mb-0">Understanding goals and identifying key metrics required.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="approach-card p-4 bg-white shadow-sm rounded border-bottom border-success border-4">
+                    <h5 class="text-success fw-bold">2. Data Preparation</h5>
+                    <p class="small text-muted mb-0">Cleaning structures, parsing anomalies and database modeling.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="approach-card p-4 bg-white shadow-sm rounded border-bottom border-warning border-4">
+                    <h5 class="text-warning fw-bold">3. Insights Generation</h5>
+                    <p class="small text-muted mb-0">Building highly optimized dashboards with clear actionable summaries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section bg-dark text-white py-5">
+    <div class="container">
+        <h2 class="text-white text-center mb-2 fw-bold">Contact Me</h2>
+        <p class="text-center text-muted mb-5">Have a project or job opportunity? Send me a message.</p>
 
         <div class="row g-4 mt-4">
             <div class="col-md-5">
-                <div class="contact-info-box p-4 bg-secondary bg-opacity-10 rounded shadow-sm accent-card-blue">
-                    <h4 class="mb-4 fw-bold text-info">Contact Junction</h4>
+                <div class="contact-info-box p-4 bg-secondary bg-opacity-20 rounded shadow-sm">
+                    <h4 class="mb-4 fw-bold">Get in Touch</h4>
                     <p class="mb-3">📧 <a href="mailto:mohit805959@gmail.com" class="text-white text-decoration-none">mohit805959@gmail.com</a></p>
                     <p class="mb-3">📱 <a href="tel:+918571800887" class="text-white text-decoration-none">+91 8571800887</a></p>
+                    <p class="mb-3">💼 <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank" class="text-white text-decoration-none">LinkedIn</a></p>
+                    <p class="mb-0">💻 <a href="https://github.com/mohit8059" target="_blank" class="text-white text-decoration-none">GitHub</a></p>
                 </div>
             </div>
 
             <div class="col-md-7">
-                <form action="https://formsubmit.co/mohit805959@gmail.com" method="POST" class="bg-secondary bg-opacity-10 p-4 rounded shadow-sm">
-                    <input type="hidden" name="_next" value="https://mohit8059.github.io/Mohit_Portfolio/thankyou.html">
-                    <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Your Structural Name" required></div>
-                    <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Corporate Email Address" required></div>
-                    <div class="mb-3"><textarea name="message" class="form-control" rows="4" placeholder="Scope of Project Details..." required></textarea></div>
-                    <button type="submit" class="btn btn-warning w-100 py-2 fw-bold text-dark">Transmit Parameters</button>
+                <form action="https://formsubmit.co/mohit805959@gmail.com" method="POST" class="contact-form bg-secondary bg-opacity-10 p-4 rounded shadow-sm">
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                    
+                    <div class="mb-3">
+                        <label for="name" class="form-label small fw-semibold text-white-50">Your Name</label>
+                        <input type="text" name="name" id="name" class="form-control bg-dark text-white border-secondary" placeholder="John Doe" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label small fw-semibold text-white-50">Email Address</label>
+                        <input type="email" name="email" id="email" class="form-control bg-dark text-white border-secondary" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label small fw-semibold text-white-50">Message</label>
+                        <textarea name="message" id="message" rows="4" class="form-control bg-dark text-white border-secondary" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-bold">Send Message</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
 
+<footer class="bg-dark text-center text-muted py-3 border-top border-secondary border-opacity-20">
+    <p class="small mb-0">&copy; 2026 Mohit Kasana. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Dark Mode Toggler JavaScript Logic -->
 <script>
-    const toggleBtn = document.getElementById('darkModeToggle');
-    toggleBtn.addEventListener('click', () => {
+    const modeToggleBtn = document.getElementById('darkModeToggle');
+    
+    // Check saved theme settings from previous session
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+        modeToggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+    } else {
+        document.documentElement.setAttribute('data-bs-theme', 'light');
+        modeToggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+    }
+
+    modeToggleBtn.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-bs-theme');
         if (currentTheme === 'dark') {
-            document.documentElement.removeAttribute('data-bs-theme');
-            toggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            modeToggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
         } else {
             document.documentElement.setAttribute('data-bs-theme', 'dark');
-            toggleBtn.innerHTML = '<i class="bi bi-sun-fill text-warning"></i>';
+            localStorage.setItem('theme', 'dark');
+            modeToggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
         }
     });
 </script>
+
 </body>
 </html>
