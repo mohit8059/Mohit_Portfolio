@@ -748,3 +748,6 @@ footer,
 #projects .project-buttons {
     margin-top: auto !important;
 }
+.education-card {
+    min-height: 230px;
+}
