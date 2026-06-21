@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Analysis Dashboard | Mohit Kasana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+        .project-hero {
+            background: linear-gradient(135deg, #0d6efd, #212529);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .project-img-box {
+            height: 420px;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: #f8f9fa;
+        }
+
+        .project-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-card,
+        .tech-card,
+        .module-card,
+        .database-card,
+        .insight-card,
+        .kpi-card,
+        .workflow-card {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover,
+        .tech-card:hover,
+        .module-card:hover,
+        .database-card:hover,
+        .insight-card:hover,
+        .kpi-card:hover,
+        .workflow-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        .dashboard-preview {
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: #f8f9fa;
+        }
+
+        .dashboard-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        [data-bs-theme="dark"] .bg-white,
+        [data-bs-theme="dark"] .bg-light {
+            background-color: #212529 !important;
+            color: #f8f9fa !important;
+        }
+
+        [data-bs-theme="dark"] .feature-card,
+        [data-bs-theme="dark"] .tech-card,
+        [data-bs-theme="dark"] .module-card,
+        [data-bs-theme="dark"] .database-card,
+        [data-bs-theme="dark"] .insight-card,
+        [data-bs-theme="dark"] .kpi-card,
+        [data-bs-theme="dark"] .workflow-card {
+            background-color: #2b3035 !important;
+            color: #f8f9fa !important;
+        }
+
+        [data-bs-theme="dark"] .text-dark {
+            color: #f8f9fa !important;
+        }
+
+        [data-bs-theme="dark"] .text-muted {
+            color: #adb5bd !important;
+        }
+
+        [data-bs-theme="dark"] .code-box {
+            background-color: #2b3035 !important;
+            color: #f8f9fa !important;
+            border-left: 4px solid #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Mohit</a>
+
+        <div class="d-flex align-items-center order-lg-3 ms-2">
+            <button class="btn btn-outline-light btn-sm rounded-circle me-2" id="darkModeToggle" title="Toggle Dark/Light Mode">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+        </div>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="project-hero">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-7">
+                <span class="badge bg-warning text-dark mb-3 px-3 py-2">Power BI Dashboard</span>
+                <h1 class="fw-bold mb-3">Customer Churn Analysis Dashboard</h1>
+
+                <p class="lead">
+                    An interactive Power BI dashboard designed to analyze customer churn behavior,
+                    identify high-risk customer segments, and discover the main reasons behind customer loss.
+                </p>
+
+                <div class="mt-4">
+                    <a href="https://github.com/mohit8059/customer_churn_analysis" target="_blank" class="btn btn-light me-2">
+                        <i class="bi bi-github me-1"></i> View GitHub
+                    </a>
+
+                    <a href="index.html#projects" class="btn btn-outline-light">
+                        <i class="bi bi-arrow-left me-1"></i> Back to Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="project-img-box shadow">
+                    <img src="images/customer_churn_dashboard.png" alt="Customer Churn Dashboard Screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Overview -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Project Overview</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <p>
+                        The Customer Churn Analysis Dashboard is created to understand why customers
+                        leave a service and which customer groups are more likely to churn.
+                    </p>
+
+                    <p>
+                        This project analyzes customer behavior based on contract type, payment method,
+                        tenure, monthly charges, internet service, senior citizen status and support services.
+                        The dashboard helps businesses identify weak areas and improve customer retention.
+                    </p>
+
+                    <p class="mb-0">
+                        This project helped me practice Power BI dashboard design, DAX measures,
+                        Power Query data cleaning, KPI creation, customer segmentation and business insight generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Problem -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Business Problem</h2>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-10">
+                <div class="bg-white rounded shadow-sm p-4">
+                    <h5 class="fw-bold text-primary">Problem Statement</h5>
+                    <p class="text-muted mb-3">
+                        A telecom company is facing customer churn. The management wants to understand
+                        which customers are leaving, what factors are causing churn, and which customer segments
+                        should be targeted for retention campaigns.
+                    </p>
+
+                    <h5 class="fw-bold text-primary">Main Objective</h5>
+                    <p class="text-muted mb-0">
+                        The objective of this dashboard is to track churn rate, analyze customer behavior,
+                        identify high-risk customers, and provide actionable insights for reducing churn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KPI Cards Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Key KPIs Used</h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="kpi-card bg-white shadow-sm rounded p-4 h-100 border-top border-primary border-4">
+                    <i class="bi bi-people-fill text-primary fs-1"></i>
+                    <h5 class="fw-bold mt-3">Total Customers</h5>
+                    <p class="small text-muted mb-0">Total number of customers available in the dataset.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="kpi-card bg-white shadow-sm rounded p-4 h-100 border-top border-danger border-4">
+                    <i class="bi bi-person-x-fill text-danger fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churned Customers</h5>
+                    <p class="small text-muted mb-0">Customers who stopped using the company service.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="kpi-card bg-white shadow-sm rounded p-4 h-100 border-top border-success border-4">
+                    <i class="bi bi-person-check-fill text-success fs-1"></i>
+                    <h5 class="fw-bold mt-3">Active Customers</h5>
+                    <p class="small text-muted mb-0">Customers who are still using the company service.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="kpi-card bg-white shadow-sm rounded p-4 h-100 border-top border-warning border-4">
+                    <i class="bi bi-percent text-warning fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churn Rate %</h5>
+                    <p class="small text-muted mb-0">Percentage of customers who left the service.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="kpi-card bg-white shadow-sm rounded p-4 h-100 border-top border-info border-4">
+                    <i class="bi bi-currency-rupee text-info fs-1"></i>
+                    <h5 class="fw-bold mt-3">Average Monthly Charges</h5>
+                    <p class="small text-muted mb-0">Average monthly amount paid by customers.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="kpi-card bg-white shadow-sm rounded p-4 h-100 border-top border-dark border-4">
+                    <i class="bi bi-calendar2-week-fill text-dark fs-1"></i>
+                    <h5 class="fw-bold mt-3">Average Tenure</h5>
+                    <p class="small text-muted mb-0">Average duration customers stayed with the company.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard Visuals -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Dashboard Visuals</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="feature-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-pie-chart-fill text-primary fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churn Distribution</h5>
+                    <p class="text-muted small mb-0">
+                        Donut chart showing churned and active customers for quick comparison.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-bar-chart-fill text-success fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churn by Contract Type</h5>
+                    <p class="text-muted small mb-0">
+                        Bar chart comparing churn across month-to-month, one-year and two-year contracts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-credit-card-fill text-warning fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churn by Payment Method</h5>
+                    <p class="text-muted small mb-0">
+                        Shows which payment methods are linked with higher churn behavior.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-wifi text-danger fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churn by Internet Service</h5>
+                    <p class="text-muted small mb-0">
+                        Analyzes churn based on DSL, Fiber Optic and no internet service customers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-clock-history text-info fs-1"></i>
+                    <h5 class="fw-bold mt-3">Churn by Tenure Group</h5>
+                    <p class="text-muted small mb-0">
+                        Helps identify whether new or long-term customers are more likely to churn.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-table text-dark fs-1"></i>
+                    <h5 class="fw-bold mt-3">High-Risk Customer Table</h5>
+                    <p class="text-muted small mb-0">
+                        Displays customers with high monthly charges, low tenure and churn risk.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Tools Used -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Tools & Technologies Used</h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-3 col-sm-6">
+                <div class="tech-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-bar-chart-line-fill text-primary fs-1"></i>
+                    <h5 class="fw-bold mt-3">Power BI</h5>
+                    <p class="small text-muted mb-0">Used for dashboard creation and visual analytics.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="tech-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-calculator-fill text-success fs-1"></i>
+                    <h5 class="fw-bold mt-3">DAX</h5>
+                    <p class="small text-muted mb-0">Used for KPI measures and churn calculations.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="tech-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-filter-square-fill text-warning fs-1"></i>
+                    <h5 class="fw-bold mt-3">Power Query</h5>
+                    <p class="small text-muted mb-0">Used for data cleaning and transformation.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="tech-card bg-white shadow-sm rounded p-4 h-100">
+                    <i class="bi bi-file-earmark-spreadsheet-fill text-danger fs-1"></i>
+                    <h5 class="fw-bold mt-3">Excel</h5>
+                    <p class="small text-muted mb-0">Used for dataset review and basic data preparation.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Dataset Details -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Dataset Details</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="database-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-success">Customer Information</h5>
+                    <ul class="small text-muted mb-0">
+                        <li>CustomerID</li>
+                        <li>Gender</li>
+                        <li>SeniorCitizen</li>
+                        <li>Partner</li>
+                        <li>Dependents</li>
+                        <li>Tenure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="database-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-success">Service Information</h5>
+                    <ul class="small text-muted mb-0">
+                        <li>PhoneService</li>
+                        <li>MultipleLines</li>
+                        <li>InternetService</li>
+                        <li>OnlineSecurity</li>
+                        <li>OnlineBackup</li>
+                        <li>TechSupport</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="database-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-success">Billing Information</h5>
+                    <ul class="small text-muted mb-0">
+                        <li>Contract</li>
+                        <li>PaperlessBilling</li>
+                        <li>PaymentMethod</li>
+                        <li>MonthlyCharges</li>
+                        <li>TotalCharges</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="database-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-success">Target Column</h5>
+                    <ul class="small text-muted mb-0">
+                        <li>Churn</li>
+                        <li>Yes = Customer left the service</li>
+                        <li>No = Customer is still active</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- DAX Measures -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Important DAX Measures</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="code-box shadow-sm">
+<pre class="mb-0"><code>Total Customers = DISTINCTCOUNT(Customer_Churn[CustomerID])
+
+Churned Customers =
+CALCULATE(
+    [Total Customers],
+    Customer_Churn[Churn] = "Yes"
+)
+
+Active Customers =
+CALCULATE(
+    [Total Customers],
+    Customer_Churn[Churn] = "No"
+)
+
+Churn Rate % =
+DIVIDE(
+    [Churned Customers],
+    [Total Customers],
+    0
+)
+
+Average Monthly Charges = AVERAGE(Customer_Churn[MonthlyCharges])
+
+Average Tenure = AVERAGE(Customer_Churn[Tenure])</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tenure Group -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Calculated Column Used</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="code-box shadow-sm">
+<pre class="mb-0"><code>Tenure Group =
+SWITCH(
+    TRUE(),
+    Customer_Churn[Tenure] &lt;= 12, "0-12 Months",
+    Customer_Churn[Tenure] &lt;= 24, "13-24 Months",
+    Customer_Churn[Tenure] &lt;= 48, "25-48 Months",
+    "49+ Months"
+)</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Insights -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Key Insights</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="insight-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-primary">1. Month-to-Month Contract Risk</h5>
+                    <p class="text-muted small mb-0">
+                        Customers using month-to-month contracts showed higher churn compared to
+                        customers with one-year or two-year contracts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="insight-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-primary">2. Low Tenure Customers</h5>
+                    <p class="text-muted small mb-0">
+                        Customers with lower tenure were more likely to leave the service,
+                        which shows that early customer engagement is important.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="insight-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-primary">3. High Monthly Charges</h5>
+                    <p class="text-muted small mb-0">
+                        Customers with higher monthly charges showed stronger churn behavior,
+                        indicating possible pricing dissatisfaction.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="insight-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-primary">4. Electronic Check Payment</h5>
+                    <p class="text-muted small mb-0">
+                        Electronic check payment method had a higher churn rate compared to
+                        automatic payment methods.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="insight-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-primary">5. Fiber Optic Customers</h5>
+                    <p class="text-muted small mb-0">
+                        Fiber optic internet users showed higher churn, which may indicate service quality
+                        or pricing related issues.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="insight-card bg-white rounded shadow-sm p-4 h-100">
+                    <h5 class="fw-bold text-primary">6. Support Services Impact</h5>
+                    <p class="text-muted small mb-0">
+                        Customers without online security or tech support were more likely to churn,
+                        showing the importance of support services.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard Preview -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Final Dashboard Preview</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+                <div class="dashboard-preview shadow">
+                    <img src="images/customer_churn_dashboard.png" alt="Customer Churn Dashboard Preview">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Workflow -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Project Workflow</h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-3">
+                <div class="workflow-card bg-white rounded shadow-sm p-4 h-100">
+                    <h1 class="fw-bold text-primary">01</h1>
+                    <h5 class="fw-bold">Data Import</h5>
+                    <p class="small text-muted mb-0">Imported customer churn dataset into Power BI.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="workflow-card bg-white rounded shadow-sm p-4 h-100">
+                    <h1 class="fw-bold text-primary">02</h1>
+                    <h5 class="fw-bold">Data Cleaning</h5>
+                    <p class="small text-muted mb-0">Cleaned null values, data types and billing columns.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="workflow-card bg-white rounded shadow-sm p-4 h-100">
+                    <h1 class="fw-bold text-primary">03</h1>
+                    <h5 class="fw-bold">DAX Measures</h5>
+                    <p class="small text-muted mb-0">Created churn KPIs, rate measures and calculated columns.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="workflow-card bg-white rounded shadow-sm p-4 h-100">
+                    <h1 class="fw-bold text-primary">04</h1>
+                    <h5 class="fw-bold">Dashboard Design</h5>
+                    <p class="small text-muted mb-0">Built interactive visuals, slicers and business insights.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Learning Outcome -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">What I Learned</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="bg-white rounded shadow-sm p-4">
+                    <ul class="mb-0">
+                        <li>How to analyze customer churn and retention problems.</li>
+                        <li>How to create professional KPI cards in Power BI.</li>
+                        <li>How to use DAX for churn rate and customer segmentation.</li>
+                        <li>How to clean and transform data using Power Query.</li>
+                        <li>How to design interactive dashboard visuals and slicers.</li>
+                        <li>How to convert raw customer data into business insights.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center bg-dark text-white">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Customer Churn Analysis Dashboard</h2>
+        <p class="text-white-50 mb-4">
+            A business-focused Power BI project designed to identify churn patterns,
+            high-risk customers and retention opportunities.
+        </p>
+
+        <a href="https://github.com/mohit8059/customer_churn_analysis_dashboard" target="_blank" class="btn btn-primary me-2">
+            <i class="bi bi-github me-1"></i> View Source Code
+        </a>
+
+        <a href="index.html#contact" class="btn btn-outline-light">
+            Contact Me
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-20">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">Mohit Kasana</h5>
+                <p class="small text-white-50">
+                    Data Analyst passionate about turning raw data into interactive dashboards,
+                    meaningful insights and efficient automation scripts.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">Quick Links</h5>
+                <p class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none small"><i class="bi bi-chevron-right me-1 text-primary"></i> About Me</a></p>
+                <p class="mb-2"><a href="index.html#skills" class="text-white-50 text-decoration-none small"><i class="bi bi-chevron-right me-1 text-primary"></i> Skills</a></p>
+                <p class="mb-2"><a href="index.html#projects" class="text-white-50 text-decoration-none small"><i class="bi bi-chevron-right me-1 text-primary"></i> Projects</a></p>
+                <p class="mb-2"><a href="index.html#contact" class="text-white-50 text-decoration-none small"><i class="bi bi-chevron-right me-1 text-primary"></i> Contact</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-center text-md-end">
+                <h5 class="text-uppercase mb-4 fw-bold text-primary">Connect</h5>
+                <div class="d-flex justify-content-center justify-content-md-end gap-2 mt-2">
+                    <a href="https://www.linkedin.com/in/mohit-kasana-202879412" target="_blank" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/mohit8059" target="_blank" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-github"></i></a>
+                    <a href="mailto:mohit805959@gmail.com" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="mb-4 mt-4 border-secondary opacity-50">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <p class="small text-white-50 mb-0">© 2026 Mohit Kasana. All Rights Reserved.</p>
+            </div>
+
+            <div class="col-md-5 col-lg-4 text-center text-md-end mt-3 mt-md-0">
+                <a href="#" class="text-white-50 text-decoration-none small">
+                    Back to top <i class="bi bi-arrow-up-circle-fill text-primary fs-5 ms-1 align-middle"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Dark Mode Script -->
+<script>
+    const toggleBtn = document.getElementById("darkModeToggle");
+    const htmlTag = document.documentElement;
+
+    if (localStorage.getItem("theme") === "dark") {
+        htmlTag.setAttribute("data-bs-theme", "dark");
+    }
+
+    toggleBtn.addEventListener("click", function () {
+        if (htmlTag.getAttribute("data-bs-theme") === "dark") {
+            htmlTag.setAttribute("data-bs-theme", "light");
+            localStorage.setItem("theme", "light");
+        } else {
+            htmlTag.setAttribute("data-bs-theme", "dark");
+            localStorage.setItem("theme", "dark");
+        }
+    });
+</script>
+
+</body>
+</html>
