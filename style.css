@@ -699,3 +699,52 @@ footer,
     margin-top: auto;
 }
 }
+/* Project card fixed size */
+#projects .project-card {
+    height: 520px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+/* Fixed image area */
+#projects .project-thumb {
+    height: 230px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    background: #f8f9fa !important;
+    flex-shrink: 0 !important;
+}
+
+#projects .project-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+}
+
+/* Title fixed */
+#projects .project-card h5 {
+    min-height: 50px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Description fixed */
+#projects .project-desc {
+    height: 70px !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+/* Tools area fixed */
+#projects .project-tools {
+    min-height: 78px !important;
+}
+
+/* Buttons bottom aligned */
+#projects .project-buttons {
+    margin-top: auto !important;
+}
