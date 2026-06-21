@@ -376,23 +376,77 @@
 <section id="projects" class="section py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Projects</h2>
+
+        <style>
+            /* Same size project cards */
+            #projects .project-card {
+                height: 540px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                overflow: hidden !important;
+            }
+
+            #projects .project-thumb {
+                height: 230px !important;
+                width: 100% !important;
+                overflow: hidden !important;
+                border-radius: 10px !important;
+                background-color: #f8f9fa !important;
+                flex-shrink: 0 !important;
+            }
+
+            #projects .project-thumb img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: top center !important;
+            }
+
+            #projects .project-card h5 {
+                min-height: 50px !important;
+                margin-bottom: 8px !important;
+            }
+
+            #projects .project-desc {
+                height: 72px !important;
+                overflow: hidden !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 3 !important;
+                -webkit-box-orient: vertical !important;
+            }
+
+            #projects .project-tools {
+                min-height: 85px !important;
+            }
+
+            #projects .project-buttons {
+                margin-top: auto !important;
+            }
+        </style>
+
         <div class="row g-4">
-            
+
             <!-- Project 1 -->
             <div class="col-md-6 col-lg-4">
-                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-                        <img src="images/sales_dashboard.png" class="w-100 h-100 img-fluid" alt="Sales Dashboard" style="object-fit: cover;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/sales_dashboard.png" alt="Sales Dashboard">
                     </div>
+
                     <h5 class="fw-bold text-dark">Sales Performance Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Power BI dashboard analyzing key metrics like sales, profit margins, and regional parameters.</p>
-                    <div class="mb-3">
+
+                    <p class="text-muted small project-desc">
+                        Power BI dashboard analyzing key metrics like sales, profit margins, and regional parameters.
+                    </p>
+
+                    <div class="project-tools mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Power Query</span>
                         <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
                     </div>
-                    <div>
+
+                    <div class="project-buttons">
                         <a href="sales_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
                         <a href="https://github.com/mohit8059/sales_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
@@ -401,18 +455,24 @@
 
             <!-- Project 2 -->
             <div class="col-md-6 col-lg-4">
-                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-                        <img src="images/hr_dashboard.png" class="w-100 h-100 img-fluid" alt="HR Dashboard" style="object-fit: cover;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/hr_dashboard.png" alt="HR Dashboard">
                     </div>
+
                     <h5 class="fw-bold text-dark">HR Analytics Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Analyzed employee attrition, workforce demographics, department performance and HR trends.</p>
-                    <div class="mb-3">
+
+                    <p class="text-muted small project-desc">
+                        Analyzed employee attrition, workforce demographics, department performance and HR trends.
+                    </p>
+
+                    <div class="project-tools mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Excel Processing</span>
                     </div>
-                    <div>
+
+                    <div class="project-buttons">
                         <a href="hr_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
                         <a href="https://github.com/mohit8059/hr_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
@@ -421,18 +481,24 @@
 
             <!-- Project 3 -->
             <div class="col-md-6 col-lg-4">
-                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-                        <img src="images/financial_dashboard.png" class="w-100 h-100 img-fluid" alt="Financial Dashboard" style="object-fit: cover;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/financial_dashboard.png" alt="Financial Dashboard">
                     </div>
+
                     <h5 class="fw-bold text-dark">Financial Analysis Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Budget vs actual metrics, custom revenues trackers and operational metrics parameters.</p>
-                    <div class="mb-3">
+
+                    <p class="text-muted small project-desc">
+                        Budget vs actual metrics, custom revenues trackers and operational metrics parameters.
+                    </p>
+
+                    <div class="project-tools mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Advanced SQL</span>
                     </div>
-                    <div>
+
+                    <div class="project-buttons">
                         <a href="financial_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
                         <a href="https://github.com/mohit8059/FInancial_Dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
@@ -441,19 +507,25 @@
 
             <!-- Project 4 -->
             <div class="col-md-6 col-lg-4">
-                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-                        <img src="images/gst_billing_system.png" class="w-100 h-100 img-fluid" alt="GST System" style="object-fit: cover;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/gst_billing_system.png" alt="GST Billing System">
                     </div>
+
                     <h5 class="fw-bold text-dark">GST Billing System</h5>
-                    <p class="text-muted small flex-grow-1">Python interactive desktop software handling system generation, structural summaries and DB connections.</p>
-                    <div class="mb-3">
+
+                    <p class="text-muted small project-desc">
+                        Python interactive desktop software handling invoice generation, summaries and database connections.
+                    </p>
+
+                    <div class="project-tools mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Python</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Tkinter GUI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">MySQL</span>
                     </div>
-                    <div>
+
+                    <div class="project-buttons">
                         <a href="gst_billing_system.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
                         <a href="https://github.com/mohit8059/gst_billing_system" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
@@ -462,19 +534,25 @@
 
             <!-- Project 5 -->
             <div class="col-md-6 col-lg-4">
-                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-                        <img src="images/nifty_dashboard.png" class="w-100 h-100 img-fluid" alt="NIFTY Dashboard" style="object-fit: cover;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/nifty_dashboard.png" alt="NIFTY Dashboard">
                     </div>
+
                     <h5 class="fw-bold text-dark">NIFTY Stock Market Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">An interactive Power BI dashboard designed to analyze stock price trends, trading volume, and returns.</p>
-                    <div class="mb-3">
+
+                    <p class="text-muted small project-desc">
+                        An interactive Power BI dashboard designed to analyze stock price trends, trading volume, and returns.
+                    </p>
+
+                    <div class="project-tools mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Power Query</span>
                     </div>
-                    <div>
+
+                    <div class="project-buttons">
                         <a href="nifty_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
                         <a href="https://github.com/mohit8059/nifty_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
@@ -483,60 +561,62 @@
 
             <!-- Project 6 -->
             <div class="col-md-6 col-lg-4">
-                <div class="project-card p-3 bg-white shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="mb-3 rounded overflow-hidden bg-light" style="height: 250px;">
-                        <img src="images/ipl_analytics_dashboard.png" class="w-100 h-100 img-fluid" alt="IPL Dashboard" style="object-fit: cover;">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/ipl_analytics_dashboard.png" alt="IPL Dashboard">
                     </div>
+
                     <h5 class="fw-bold text-dark">IPL Analytics Dashboard</h5>
-                    <p class="text-muted small flex-grow-1">Interactive Power BI dashboard designed to analyze IPL team performance, player statistics, and match trends.</p>
-                    <div class="mb-3">
+
+                    <p class="text-muted small project-desc">
+                        Interactive Power BI dashboard designed to analyze IPL team performance, player statistics, and match trends.
+                    </p>
+
+                    <div class="project-tools mb-3">
                         <strong class="small text-dark d-block mb-1">Tools Used:</strong>
                         <span class="badge bg-primary-subtle text-primary m-1">Power BI</span>
                         <span class="badge bg-primary-subtle text-primary m-1">DAX</span>
                         <span class="badge bg-primary-subtle text-primary m-1">Excel</span>
                     </div>
-                    <div>
+
+                    <div class="project-buttons">
                         <a href="ipl_analytics_dashboard.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
                         <a href="https://github.com/mohit8059/ipl_analytics_dashboard" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
-        </div> <!-- /row -->
-    </div> <!-- /container -->
-<!-- Project 7 -->
-<div class="col-md-6 col-lg-4">
-    <div class="project-card p-3 bg-white shadow-sm rounded h-100">
-        
-        <div class="project-thumb mb-3">
-            <img src="images/student_management_system.png" 
-                 alt="Student Management System">
+            <!-- Project 7 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card p-3 bg-white shadow-sm rounded h-100">
+                    <div class="project-thumb mb-3">
+                        <img src="images/student_management_system.png" alt="Student Management System">
+                    </div>
+
+                    <h5 class="fw-bold text-dark">Student Management System</h5>
+
+                    <p class="text-muted small project-desc">
+                        A Python-based desktop application designed to manage student records, attendance, fees, courses, reports and role-based access.
+                    </p>
+
+                    <div class="project-tools mb-3">
+                        <strong class="small text-dark d-block mb-1">Tools Used:</strong>
+                        <span class="badge bg-primary-subtle text-primary m-1">Python</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">Tkinter</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">MySQL</span>
+                        <span class="badge bg-primary-subtle text-primary m-1">OOP</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="student_management_system.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
+                        <a href="https://github.com/mohit8059/student_management_system" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <h5 class="fw-bold text-dark">Student Management System</h5>
-
-        <p class="text-muted small project-desc">
-            A Python-based desktop application designed to manage student records,
-            attendance, fees, courses, reports and role-based access for Admin and Teacher users.
-        </p>
-
-        <div class="project-tools mb-3">
-            <strong class="small text-dark d-block mb-1">Tools Used:</strong>
-            <span class="badge bg-primary-subtle text-primary m-1">Python</span>
-            <span class="badge bg-primary-subtle text-primary m-1">Tkinter</span>
-            <span class="badge bg-primary-subtle text-primary m-1">MySQL</span>
-            <span class="badge bg-primary-subtle text-primary m-1">OOP</span>
-        </div>
-
-        <div class="project-buttons">
-            <a href="student_management_system.html?v=2" class="btn btn-primary btn-sm me-2">View Project</a>
-            <a href="https://github.com/mohit8059/student_management_system" class="btn btn-outline-dark btn-sm" target="_blank">GitHub</a>
-        </div>
-
     </div>
-</div>
 </section>
-
 <!-- Working Approach Section -->
 <section class="section bg-light py-5">
     <div class="container">
